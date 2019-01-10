@@ -13,8 +13,8 @@ def find_smallest(arr):
 
     return smallest_index, smallest
 
-def selection_sort1(arr):
-    """ 空间复杂度较高版本 """
+def selection_sort_simple(arr):
+    """ 非原地算法 """
     sorted_arr = []
     for i in range(len(arr)):
         smallest_index, smallest = find_smallest(arr)
@@ -22,8 +22,8 @@ def selection_sort1(arr):
     return sorted_arr
 
 
-def selection_sort2(arr):
-    """ 空间复杂度低版本 """
+def selection_sort_high(arr):
+    """ 原地算法 """
 
     for i in range(len(arr)):
         smallest_index, smallest  = find_smallest(arr[i:])
@@ -32,15 +32,3 @@ def selection_sort2(arr):
         arr[i + smallest_index] = temp
 
     return arr
-
-
-
-if __name__ == "__main__":
-
-
-    a = selection_sort1([3, 5,6, 7,12, 3, 69, 12, 45,65])
-    print(a)
-
-
-    b = selection_sort2([3, 5, 90, 45, 36, 65, 21, 43, 7, 7, 12, 45,65])
-    print(b)
