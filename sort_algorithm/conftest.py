@@ -2,7 +2,7 @@
 import random
 import pytest
 
-@pytest.fixture(scope="class")
+@pytest.fixture
 def  generate_arr():
     """ 生成 num个数字，left < 元素 < right 
     Args:
