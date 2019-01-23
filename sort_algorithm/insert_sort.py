@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 
-""" 插入排序算法实现 """
-
 
 def insert_sort(arr):
+    """ 插入排序算法实现 """
+    
     for i in range(1, len(arr)):
         for j in range(i, 0, -1):
             if arr[j] < arr[j-1]:

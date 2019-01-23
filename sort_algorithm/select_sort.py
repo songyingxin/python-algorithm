@@ -11,13 +11,13 @@ def find_smallest(arr):
             smallest = arr[i]
             smallest_index = i
 
-    return smallest_index, smallest
+    return smallest_index
 
 def selection_sort_simple(arr):
     """ 非原地算法 """
     sorted_arr = []
     for i in range(len(arr)):
-        smallest_index, smallest = find_smallest(arr)
+        smallest_index = find_smallest(arr)
         sorted_arr.append(arr.pop(smallest_index))
     return sorted_arr
 
@@ -26,9 +26,8 @@ def selection_sort_high(arr):
     """ 原地算法 """
 
     for i in range(len(arr)):
-        smallest_index, smallest  = find_smallest(arr[i:])
-        temp = arr[i]
-        arr[i] = arr[i + smallest_index]
-        arr[i + smallest_index] = temp
+        smallest_index = find_smallest(arr[i:])
+
+        arr[i], arr[i + smallest_index] = arr[i + smallest_index], arr[i]
 
     return arr

@@ -5,6 +5,7 @@
 """
 
 def quicksort(arr):
+    """ 非原地算法 """
     if len(arr) < 2:
         return arr
     else:
@@ -13,6 +14,15 @@ def quicksort(arr):
         greater = [i for i in arr[1:] if i > pivot]
 
         return quicksort(less) + [pivot] + quicksort(greater)
+
+def quick_sort_classic(arr):
+    """ 经典随机快排 """
+
+
+def partition_classic(arr, low, high):
+    """ 划分数组 """
+            
+
 
 if __name__== "__main__":
     print(quicksort([10, 4, 6, 7, 96, 8,23]))
