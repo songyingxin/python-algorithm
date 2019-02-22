@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 class merge_simple:
+    """非原地算法实现 """
     def merge(self, arr1, arr2):
         """ 合并两个有序数组 """
         left = 0
@@ -25,7 +26,7 @@ class merge_simple:
         return result
 
     def merge_sort(self, arr):
-        """ 非原地算法递归实现 """
+        """ 算法递归实现 """
         if len(arr) <= 1:
             return arr
         

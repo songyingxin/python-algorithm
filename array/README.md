@@ -11,6 +11,8 @@
 删除 | O(1) | $\sum_{i=1}^n p_i (n-i) = \frac{n-1}{2}$ | O(n)
 按值查找 |  O(1) | $\sum_{i=1}^n p_i n = \frac{n+1}{2}$ | O(n)
 
+
+
 ## LeetCode
 
 ### 1. Move-zeros
@@ -108,20 +110,6 @@
 - 问题: 
 
 
-## 牛客算法
-
-### 1. classify_array
-
-- 题目： 给定一个数组arr和一个数num， 请把小于等于num的数放在数组的左边，大于num的数放在数组的右边。
-- 要求： 空间复杂度为O(1)， 时间复杂度为O(N)
-- 思路： 设定一个left=-1 表示起始时，小于num的左指针位置， 从头到尾遍历数组，如果arr[i] < num，则arr[left+1], arr[i] = arr[i], arr[left+1], 否则，跳过。
-
-
-### 2. 荷兰国旗问题
-
-- 问题： 给定一个数组arr 和一个数num， 请把小于num的数放在数组的左边， 等于num的数放在数组的中间，大于num的数放在数组的右边
-- 要求： 空间复杂度为O(1)， 时间复杂度为O(N)
-- 思路： 设定一个left = -1, right = len(arr), 从头到尾遍历数组，如果arr[i] < num， 则 arr[left+1], arr[i] = arr[i], arr[left+1]; 如果 arr[i] == num， 跳过; 如果 arr[i] > num， 则 arr[right-1] arr[i] = arr[i], arr[right-1], 此时i 不变, 接着重复判断 arr[i] 。 
 
 ### 3. 最大差值
 

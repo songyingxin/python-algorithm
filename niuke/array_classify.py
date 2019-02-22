@@ -2,11 +2,11 @@
 
 def classify_arr(arr, num):
 
-    left = -1
+    left = 0   # 0- left 存储小于num的元素 
     
     for i in range(len(arr)):
         if arr[i] < num:
-            arr[left+1], arr[i] = arr[i], arr[left+1]
+            arr[left], arr[i] = arr[i], arr[left]
             left += 1
 
 
