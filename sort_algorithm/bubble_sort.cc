@@ -27,6 +27,25 @@ class BubbleSort
             }
         }
 
+        void bubbleSort2(vector<int> &arr)
+        {
+            if (arr.size() < 2)
+            {
+                return;
+            }
+
+            for (int start = 0; start < arr.size(); start++)
+            {
+                for (int i=arr.size()-1; i >= start; i--)
+                {
+                    if (arr[i] > arr[i+1])
+                    {
+                        swap(arr[i], arr[i+1]);
+                    }
+                }
+            }
+        }
+
 
 };
 
@@ -34,11 +53,11 @@ class BubbleSort
 
 int main()
 {
-    //vector<int> arr = { 2,5,1,5,7,9,3,2};
-    vector<int> arr = {};
+    vector<int> arr = { 2,5,1,5,8,2,12,4,78,43};
+    //vector<int> arr = {};
 
     BubbleSort algo;
-    algo.bubbleSort(arr);
+    algo.bubbleSort2(arr);
     for (std::vector<int>::iterator m = arr.begin(); m != arr.end(); m++) //用迭代器的方式输出容器对象的值
     {
         cout << *m << endl;

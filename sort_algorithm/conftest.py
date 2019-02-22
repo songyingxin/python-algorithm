@@ -13,6 +13,7 @@ def  generate_arr():
     Returns:
         arr: 生成的无序数组
     """
-    return [random.randint(1, 10000) for i in range(1000)]
+    return [random.randint(1, 10) for i in range(100)]
 
-print(type(generate_arr))
+arr = generate_arr()
+print(arr)

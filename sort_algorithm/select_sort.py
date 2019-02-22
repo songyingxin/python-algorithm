@@ -13,17 +13,7 @@ def find_smallest(arr):
 
     return smallest_index
 
-def selection_sort_simple(arr):
-    """ 非原地算法 """
-    sorted_arr = []
-    for i in range(len(arr)):
-        smallest_index = find_smallest(arr)
-        sorted_arr.append(arr.pop(smallest_index))
-    return sorted_arr
-
-
-def selection_sort_high(arr):
-    """ 原地算法 """
+def selection_sort(arr):
 
     for i in range(len(arr)):
         smallest_index = find_smallest(arr[i:])

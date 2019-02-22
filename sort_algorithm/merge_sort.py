@@ -2,7 +2,7 @@
 
 class merge_simple:
     def merge(self, arr1, arr2):
-        """ 合并操作,将两个数组合并,非原地算法 """
+        """ 合并两个有序数组 """
         left = 0
         right = 0
 
