@@ -40,3 +40,8 @@ class StackMin1:
 
     def is_empty(self):
         return self.stack_data == []
+
+
+if __name__ == "__main__":
+    
+    

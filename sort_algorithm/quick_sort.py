@@ -29,7 +29,8 @@ def quick_sort(arr, low, high):
 
 
 def partition(arr, low, high):
-    """ 划分数组, 以arr[high]为分界线，将小于arr[high]的元素放到arr左边，大于arr[high] 的元素放到arr右边 
+    """ 
+    划分数组, 以arr[high]为分界线，将小于arr[high]的元素放到arr左边，大于arr[high] 的元素放到arr右边 
     Returns:
         left: arr[low] - arr[left-1] 存放比 arr[high] 小的元素
         right: arr[right+1] - arr[high] 存放比 arr[high] 大的元素
