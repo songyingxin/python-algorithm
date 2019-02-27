@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-
+import util
 
 def insert_sort(arr):
     """ 插入排序算法实现 """
@@ -12,6 +12,18 @@ def insert_sort(arr):
                 break
     return arr
 
-if __name__ == "__main__":
 
-    print(insert_sort([54, 26, 93, 17, 77, 31, 44, 55, 20]))
+if __name__ == "__main__":
+    test_time = 5000
+    max_size = 100
+    max_value = 100
+    min_value = 0
+    for i in range(test_time):
+        arr1 = util.get_random_array(max_size, min_value, max_value)
+        arr2 = arr1.copy()
+        tmp = arr1.copy()
+
+        if insert_sort(arr1) != sorted(arr2):
+            print("the false sample is {}".format(tmp))
+            print("the result of the false is {}".format(arr1))
+            break
