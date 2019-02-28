@@ -8,6 +8,7 @@ typedef struct LNode{
     Type data;
     struct LNode *next;
 }
+// 双向链表
 typedef struct LNode{
     Type data;
     struct LNode *prior, *next;
@@ -18,8 +19,9 @@ typedef struct LNode{
 
 操作 | 时间复杂度 | 说明
 --- | --- | ---
-insert() | O(1) | 在链表尾部插入一个元素
-delete() | O(1) | 删除L中的x元素
+insert(x) | O(1) | 在链表插入关键字为x的元素， 可以采用头插法或尾插法
+delete(x) | O(1) | 删除L中的关键字为x的元素
+search(x) | O(n) | 查找L中的关键字为x的元素
 
 
 ## 头结点

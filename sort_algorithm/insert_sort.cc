@@ -12,13 +12,13 @@ void insertSort(T arr[], int n){
 
         /* 将交换操作改为赋值操作可以提高效率 */
 
-        T e = arr[i];
+        T key = arr[i];
         int j;
-        for (j = i; j > 0 && arr[j-1] > e; j--)
+        for (j = i; j > 0 && arr[j-1] > key; j--)
         {
             arr[j] = arr[j - 1];
         }
-        arr[j] = e;
+        arr[j] = key;
     }
 }
 
