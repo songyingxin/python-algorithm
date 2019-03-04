@@ -76,7 +76,13 @@ class MyStack
     /** Push element x onto stack. */
     void push(int x)
     {
-        data.push(x);
+        help.push(x);
+        while(!data.empty()){
+            help.push(data.front());
+            data.pop();
+        }
+
+        swap(data, help);
     }
 
     /** Removes the element on top of the stack and returns that element. */

@@ -11,3 +11,4 @@
 
 - 思路2：同样采用两个队列， data 用于入元素， help 用于帮助返回元素。 不过，此时复杂操作在push端：
    > - pop: 直接将data中的第一个元素 pop
+   > - push: 先将元素放入help中， 然后将data中的元素依次放入help中， 交换 data， help
