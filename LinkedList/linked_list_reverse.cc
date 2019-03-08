@@ -23,6 +23,23 @@ class Solution
     }
 };
 
+class Solution
+{
+  public:
+    ListNode *reverseList(ListNode *head)
+    {
+        ListNode new_head(0);
+        while (head)
+        {
+            ListNode *next = head->next;
+            head->next = new_head.next;
+            new_head.next = head;
+            head = next;
+        }
+        return new_head.next;
+    }
+};
+
 int main(){
     ListNode a(1);
     ListNode b(2);

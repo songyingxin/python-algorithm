@@ -33,12 +33,11 @@
 
 来源： [leetcode 206](https://leetcode-cn.com/problems/reverse-linked-list/)
 
-- 题目： 反转一个单链表
+- 题目： 反转一个单链表，**注意： 此处的head也存数据**
 
-### 思路：
+- 思路1：采用一个新的头结点new_head ， 依次访问原节点，将节点采用头插法插入到新节点中。
+- 思路2： 采用一个新的头结点new_head ， 依次访问原节点，然后将节点逆序
 
-采用一个新的头结点new_head ， 依次访问原节点，将节点采用头插法插入到新节点中。
-**注意： 此处的head也存数据**
 
 ## 2. 链表逆序 - linked_list_part_reverse
 
