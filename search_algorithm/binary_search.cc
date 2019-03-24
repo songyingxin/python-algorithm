@@ -2,6 +2,7 @@
 #include <cmath>
 #include <ctime>
 #include <cassert>
+#include <vector>
 
 using namespace std;
 
@@ -32,4 +33,20 @@ int binary_search(T arr[], int n, T target){
 }
 
 
+int binary_search_recursion(std::vector<int> &sort_array, int begin, int end, int target){
+    if (begin > end){
+        return -1;
+    }
 
+    int mid = begin + (end-begin)/2;
+
+    if (target == sort_array[mid]){
+        return mid;
+    }
+    else if (target < sort_array[mid]){
+        return binary_search_recursion(sort_array, begin, mid-1, target);
+    }
+    else{
+        return binary_search_recursion(sort_array, mid+1, end, target);
+    }
+}

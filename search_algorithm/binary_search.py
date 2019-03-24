@@ -17,9 +17,9 @@ def binary_search(items, item):
         else:
             low = mid + 1
 
-    return None
+    return low
 
 if __name__ == "__main__":
     example = [1, 3, 5, 6, 7, 9]
 
-    print(binary_search(example, 9))
+    print(binary_search(example,0 ))
