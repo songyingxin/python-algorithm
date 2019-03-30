@@ -15,3 +15,5 @@ class Solution:
             list_print.append(listNode.val)
             listNode = listNode.next
         return list_print[::-1]
+
+
