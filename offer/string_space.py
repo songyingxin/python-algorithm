@@ -13,8 +13,3 @@ class Solution:
                 result.append(char)
         return ''.join(result)
 
-
-class Solution:
-    # s 源字符串
-    def replaceSpace(self, s):
-        # 思路1

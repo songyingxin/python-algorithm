@@ -8,7 +8,6 @@ class TreeNode:
 
 class Solution:
     # 返回构造的TreeNode根节点
-    result = []
     def reConstructBinaryTree(self, pre, tin):
         # write code here
         if not pre:
