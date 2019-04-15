@@ -130,3 +130,13 @@
 ]
 ```
 
+
+---
+
+**牛客**
+
+## 字符串全排列
+
+- 来源： https://www.nowcoder.com/questionTerminal/fe6b651b66ae47d7acce78ffdd9a96c7
+- 题目： 打印一个字符串全部子序列，包括空字符串
+- 类似： 回溯 - 全排列问题
