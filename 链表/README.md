@@ -1,21 +1,17 @@
 
-## 1. 链表逆序 -  linked_list_reverse
+## 1. 反转链表
 
-来源： [leetcode 206](https://leetcode-cn.com/problems/reverse-linked-list/)
+来源： leetcode 206
 
-- 题目： 反转一个单链表，**注意： 此处的head也存数据**
+- **注意： 此处的head也存数据**
 
 - 思路1：采用一个新的头结点new_head ， 依次访问原节点，将节点采用头插法插入到新节点中。
 - 思路2： 采用一个新的头结点new_head ， 依次访问原节点，然后将节点逆序
 
 
-## 2. 链表逆序 - linked_list_part_reverse
+## 2. 反转链表2
 
-- 来源： [leetcode 92](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
-
--  题目： 反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
-
-- 举例：输入 1-2-3-4-5-NULL, m=2,n=4； 输出：1-4-3-2-5-NULL
+- 来源： **leetcode 92**
 
 - 思路：
   > - 查找关键节点： 1. 逆置段头结点前驱 ； 2. 逆置段逆置后尾节点； 3. 逆置段逆置后头节点； 4. 逆置段尾节点的后继
