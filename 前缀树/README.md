@@ -1,14 +1,11 @@
-## 1. 实现前缀树
-
-- 来源： leetcode 208
-- 思路： 首先定义TrieNode ， chile 表示该节点有多少种可能， path 表示有无字符串通过该节点， end 表示有无字符串以该节点为结尾
+## 1. 实现前缀树 -- 208
+- 思路： 首先定义TrieNode ， child 表示该节点有多少种可能， path 表示有无字符串通过该节点， end 表示有无字符串以该节点为结尾
 > - insert： 
 > - search: 
 > - startsWith: 
 
-## 2. 添加与搜索单词
+## 2. 添加与搜索单词 -- 211
 
-- 来源： **leetcode 211**
 - 思路：
 > - add： 其与 Trie 树的实现差不多
 > - search： 需要采用递归来做： search_trie(node, word)
