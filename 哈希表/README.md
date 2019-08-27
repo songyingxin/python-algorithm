@@ -46,3 +46,11 @@
 - 若vec未出现在anagram中，设置vec到一个空字符串向量的映射
 - 将strs[i] 添加至字符串向量 anagram[vec] 中
 
+## 4. LRU 缓存机制 -- 有意思
+
+- 来源： leetcode 146
+
+- 思路1： OrderedDict
+- 思路2： 哈希表 + 双向链表
+
+
