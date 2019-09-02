@@ -24,6 +24,9 @@ Easy
 - 来源： leetcode 234
 - 思路：采用栈的思想来做
 
+## 5. 删除链表中的节点
+- 来源： leetcode 237
+- 思路： 将 node.next 的值复制到 node 中，然后删除 node.next 节点
 ---
 Medium
 

@@ -15,9 +15,7 @@
 ---
 ## 1. 数值的整数次方
 
-- 来源： offer 16
-- 题目： 实现函数 double power(double base, int exponent)， 求 base 的 exponent 次方。
-- 要求： 不得使用库函数， 同时不需要考虑大数问题
+- 来源： [offer 16](<https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00?tpId=13&tqId=11165&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
 
 ### 思路1：
 
@@ -25,20 +23,10 @@
 > - base = 0 exponent < 0时， 报错
 > - exponent > 0, exponent < 0, exponent = 0 时 
 
-### 思路2：
-
-- 当 exponent 为偶数时， f(n) = f(n/2) * f(n/2)
-- 当 exponent 为奇数时， f(n) = f((n-1)/2) *  f((n-1)/2) * a 
-
-### 测试用例
-
-将base 和exponent 分别设置为正数， 负数，0
-
 
 ## 2. 打印从1到最大的n位数
 
-- 题目： 输入数字n， 按顺序打印出从1到最大的n位十进制数。
-- 举例： 输入3，则打印1，... , 999
+- 来源： [offer 17]()
 - 陷阱： n很大时的溢出问题， n <= 0 时的错误输入问题
 
 ### 思路1：

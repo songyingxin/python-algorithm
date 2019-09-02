@@ -3,40 +3,32 @@
 ---
 ## 1. 斐波那契数列
 
-- 来源： offer 10
+- 来源： [offer 10](<https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>)， 此题本质上是动态规划的简化， 已经给出了状态转移方程，主要是看如何省略 dp 数组，仅维护两个变量来维持整个动态方程
 - 输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）
 
 $$
 f(n)= \begin{cases} 0 \qquad n=0 \\ 1  \qquad n=1 \\ f(n-1) + f(n-2) \qquad n>1 \end{cases}
 $$
 
-- 思路： 去掉重复运算，通过先计算f(2),f(3)依次计算，直至第n项
-
 ## 2. 青蛙跳台阶问题
 
-- 来源： offer 10
-- 题目：一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法（先后次序不同算不同的结果）。
-
-- 分析
-> - n=1 时， 1种跳法, 即 f(1) = 1
-> - n=2 时， 2种跳法, 即 f(2) = 2
-> - n>2 时， 第一次跳的时候有两种选择：
->> - 第一次只跳1级，则此时跳法数目 = 后面剩下n-1级的跳法数目 f(n-1)
->> - 第一次只跳2级，则此时跳法数目 = 后面剩下的 n-2 级台阶的跳法数目 f(n-2)
->> 因此有f(n) = f(n-1) + f(n-2)
+- 来源： [offer 10](<https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4?tpId=13&tqId=11161&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)， 本题考的是你有没有能力将问题转化为动态规划问题，并写出状态转移方程。
+- n=1 时， 1种跳法, 即 f(1) = 1
+- n=2 时， 2种跳法, 即 f(2) = 2
+- n>2 时， 第一次跳的时候有两种选择：
+> - 第一次只跳1级，则此时跳法数目 = 后面剩下n-1级的跳法数目 f(n-1)
+> - 第一次只跳2级，则此时跳法数目 = 后面剩下的 n-2 级台阶的跳法数目 f(n-2)
+> 因此有 f(n) = f(n-1) + f(n-2)
 
 ### 3. 变态跳台阶
 
-- 来源： offer 10
-- 题目：**一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。**
-
+- 来源： [offer 10](<https://www.nowcoder.com/practice/22243d016f6b47f2a6928b4313c85387?tpId=13&tqId=11162&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
 - 思路： 我们可以用归纳法推出： $f(n) = f(1) + ... + f(n-1) + 1 =  2^{n-1}$， 如果可能，推一遍更好。
 
 ### 4. 矩形覆盖
 
-- 来源： offer 10
-- 题目：我们可以用 `2*1` 的小矩形横着或者竖着覆盖更大的矩形，请问用n个 `2*1` 的小矩形五重叠的覆盖一个 `2*n` 的大矩形，总共有多少种方法。
-- 思路：
+- 来源： [offer 10](<https://www.nowcoder.com/practice/72a5a919508a4251859fb2cfb987a0e6?tpId=13&tqId=11163&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
+- 动态规划，状态转移方程：
 > - n =1: f(n) = 1
 > - n =2: f(n) = 2
 > - n > 2: f(n) = f(n-1) + f(n-2)
@@ -44,31 +36,31 @@ $$
 
 ## 5. 剪绳子
 
-- 来源： offer 14
+- 来源： [offer 14](<https://leetcode-cn.com/problems/integer-break/>) 类似 leetcode 343
 - 题目： **给你一根长度为n的绳子，请把绳子剪成m段(m,n 都是整数， n>1, m>1)， 每段绳子的长度记为 k[0], k[1]，...，k[m]。 请问k[0] * ... *k [m] 可能的最大乘积是多少？**
 
 ### 思路1：动态规划
 
-- 递归形式分析
-> - 首先，定义函数f(n) 为长度为n的绳子剪成若干段各段长度乘积的最大值
-> - 第一刀时， 有n-1种可能，此时， f(n) = max(f(1) * f(n-1), f(2) * f(n-2), ... f(n-(n-1)) * f(1))
-   这是一个从上到下的递归公式， 此时会有大量的重复计算。
+- dp[i]： 长度为 i 的绳子剪成若干段各段长度乘积的最大值
 
-- 非递归分析：
-> - 更好的办法是按照从下到上的顺序计算， 即先计算f(2), f(3)， 再得到 f(4), f(5)， 最终得到 f(n)
-> - n = 2 时， 剪成长度各为1的两段，f(2) = 1
-> - n = 3 时， 剪成长度为1和2的两段或者长度都为1的三段， f(3) = 2
+```
+dp[i] = max(dp[1] * dp[i-1], ..., dp[i-1]*dp[1])
+```
 
 ### 思路2： 贪婪算法
 
 如果按照如下策略剪绳子， 则得到的各个绳子的长度乘积最大：
-> - n>=5时， 尽可能多剪长度为3的绳子
-> - n = 4 时， 将绳子剪成长度为2的两段
+- n>=5时， 尽可能多剪长度为3的绳子
+- n = 4 时， 将绳子剪成长度为2的两段
 
-### 测试用例：
+---
 
-- 功能测试： 绳子的初始长度大于5
-- 边界测试： 绳子初始长度分别为 0， 1， 2，3， 4
+## 第五章
+
+### 1. 丑数
+
+- 来源： [offer 49](<https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b?tpId=13&tqId=11186&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
+- 思路：动态规划
 
 
 # 第六章

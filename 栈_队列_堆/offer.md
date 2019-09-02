@@ -5,22 +5,12 @@
 
 ## 1. 两个栈实现队列
 
-- 来源： offer 9
-- 题目： 用两个栈来实现一个队列，完成队列的Push和Pop操作。
-
-- 思路： 
-  > - push： 直接将元素直接存入 stack1 中
-  > - pop: 如果stack2为空，则将stack1 中元素压入到stack2中，再pop； 如果非空，则直接pop。
-
-- 单元测试
-> - 向空的队列中添加，删除元素
-> - 向非空的队列中添加，删除元素
-> - 连续删除元素直至队列为空
-
+- 来源： [offer 9](<https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6?tpId=13&tqId=11158&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
+  - push： 直接将元素直接存入 stack1 中
+  - pop: 如果stack2为空，则将stack1 中元素压入到stack2中，再pop； 如果非空，则直接pop。
 ## 2. 用两个队列实现一个栈
-- offer 9
-- 题目：用两个队列实现栈
-- 思路：data， help
+- [offer 9](<https://leetcode-cn.com/problems/implement-stack-using-queues/>)
+- 两个队列：data， help
 > - push： 直接将元素存入data中
 > - pop： 将data 中的元素依次 pop到help中，直至data中只剩下一个元素， 然后弹出该元素， data， help互换
 
@@ -29,64 +19,32 @@
 
 ### 1.  包含 min 函数的栈
 
-- 来源： offer 30
-- 题目：定义栈的数据结构，请在该类型中实现一个能够找到栈的最小元素的 min 函数。 该栈中，调用 min, push, pop 的时间复杂度为 O(1)
+- 来源： [offer 30](<https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49?tpId=13&tqId=11173&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
 - 思路： 维护两个栈： min_stack, core_stack ，min_stack 维护最小元素
-- 测试用例：
-  > - 新压入栈的数字比之前的最小值大
-  > - 新压入栈的数字比之前的最小值小
-  > - 弹出栈的数字不是最小元素
-  > - 弹出栈的数字是最小元素 
 
 ### 2. 栈的压入，弹出序列
 
-- 来源： **offer 31**
-- 问题： 输入两个整数序列，第一个序列表示栈的压入顺序， 请判断第二个数字是否为该栈的弹出顺序。（假设压入栈的数字均不相等)
-- 思路：用一个栈来模拟这个过程。
-
-- 测试用例：
-  > - 功能测试： 输入的两个数组含有多个数字或只有1个数字； 第二个数组是或不是第一个数组表示的压入序列对应的栈的弹出序列
-  > - 特殊输入测试： 两个输入都为 None
-
-
-
-
-
-
-
+- 来源： [offer 31](<https://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106?tpId=13&tqId=11174&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
+- 思路：用一个栈来模拟这个过程
 
 # 第六章
+
 ---
 
-## 1. 队列的最大值
+## 1. 滑动窗口的最大值  --Re
 
-offer: 59
-
-### 1. 滑动窗口的最大值
-
-- 题目：**给定一个数组和滑动窗口的大小， 请找出所有滑动窗口里的最大值。** -- 不熟
-- 举例： 输入：[2,3,4,2,6,2,5,1]，3， 那么最终返回[4,4,6,6,6,5]
-
+- [offer 59](<https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788?tpId=13&tqId=11217&tPage=4&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
 - 思路：采用一个队列S， 注意S中存放的是元素的下标。 遍历数组arr：
-  > - if S 为空， 则插入i
-  > - if arr[i] > arr[S.first], 则清空S， S.first = i
-  > - if S.size() == 2, arr[i] <= arr[S.end]， 则丢弃 arr[i]
-  > - if S.size() ==2, arr[i] > arr[S.end]， 则 S.end = arr[i]
-  > - if i+1 - S.first == 3, 则S.first 出队列
-
-- 测试用例：
-  > - 功能测试： 输入数组的数字大小无序； 输入数组的数字单调递增； 输入数组的数字单调递减
-  > - 边界值测试： 滑动窗口大小为 0， 1， 等于输入数组长度， 大于输入数组长度
-  > - 特殊输入测试： 数组为空
+  - if S 为空， 则插入i
+  - if arr[i] > arr[S.first], 则清空S， S.first = i
+  - if S.size() == 2, arr[i] <= arr[S.end]， 则丢弃 arr[i]
+  - if S.size() ==2, arr[i] > arr[S.end]， 则 S.end = arr[i]
+  - if i+1 - S.first == 3, 则S.first 出队列
 
 
-### 2. 队列的最大值 -- 未找到oj
+## 2. 队列的最大值 
 
-- 问题： **请定义一个队列并实现函数max 得到队列里的最大值。**
-- 要求：函数max， push_back和 pop_front的时间复杂度为O(1)
-
+- offer 59  无 oj
 - 思路： 采用双队列的形式，一个队列存储数据，一个队列存储当前最大值。
 
-- 测试用例：
-  > - 向队列末尾插入不同大小的数字并求最大值； 从队列头部删除数字并求最大值
 
