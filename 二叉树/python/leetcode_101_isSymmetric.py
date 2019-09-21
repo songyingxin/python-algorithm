@@ -5,23 +5,16 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
-        if not root:
-            return True
-        
-        return self.is_mirror(root.left, root.right)
 
-    
-    def is_mirror(self, p, q):
+        def sub(l, r):
+            if not l and not r:
+                return True
+            if not l or not r:
+                return False
 
-        if not p and not q:
-            return True
-        
-        if not p or not q:
-            return False
-        
-        l = self.is_mirror(p.left, q.right)
-        r = self.is_mirror(p.right, q.left)
+            return l.val == r.val and sub(l.left, r.right) and sub(l.right, r.left)
 
-        return p.val == q.val and l and r
+        return sub(root, root)

@@ -108,5 +108,7 @@
 
 ## 1. 树中两个节点的最低公共祖先
 
+- 来源：offer 68  leetcode 236
+- 思路：
 
-
+<https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/er-cha-shu-de-zui-jin-gong-gong-zu-xian-by-leetcod/>

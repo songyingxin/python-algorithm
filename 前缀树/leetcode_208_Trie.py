@@ -1,3 +1,44 @@
+class Trie:
+
+    def __init__(self):
+
+        self.lookup = {}
+
+    def insert(self, word):
+
+        tree = self.lookup
+        for val in word:
+            if val not in tree:
+                tree[val] = {}
+            tree = tree[val]
+
+        tree['#'] = '#'  # 单词结束标志
+
+    def search(self, word):
+
+        tree = self.lookup
+        for val in word:
+            if val not in tree:
+                return False
+
+            tree = tree[val]
+
+        if '#' in tree:
+            return True
+
+        return False
+
+    def startsWith(self, prefix):
+
+        tree = self.lookup
+        for val in prefix:
+            if val not in tree:
+                return False
+
+            tree = tree[val]
+
+        return True
+
 
 class TrieNode:
     def __init__(self):
@@ -17,7 +58,7 @@ class Trie:
         """
         Inserts a word into the trie.
         """
-        if word == None:
+        if not None:
             return
         node = self.root
         for val in word:
@@ -67,3 +108,8 @@ class Trie:
                     return
                 node = node.child[index]
             node.end -= 1
+
+
+
+
+

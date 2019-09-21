@@ -8,10 +8,10 @@
 class Solution:
     def reverseBetween(self, head, m, n):
 
-        dummy = ListNode(0)
-        dummy.next = head
+        new_head = ListNode(0)
+        new_head.next = head
 
-        pre = dummy  # 第一个反转节点的前驱节点
+        pre = new_head  # 第一个反转节点的前驱节点
 
         for i  in range(m-1):
             pre = pre.next
@@ -24,7 +24,7 @@ class Solution:
             next_ptr.next = pre.next
             pre.next = next_ptr
         
-        return dummy.next
+        return new_head.next
 
 
 

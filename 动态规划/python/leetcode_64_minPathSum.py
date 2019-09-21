@@ -8,8 +8,7 @@ class Solution:
         dp[0][0] = grid[0][0]
         for i in range(1, M):
             dp[i][0] = dp[i-1][0] + grid[i][0]
-        
-
+            
         for i in range(1, N):
             dp[0][i] = dp[0][i-1] + grid[0][i]
         

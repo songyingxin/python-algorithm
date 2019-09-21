@@ -83,5 +83,6 @@
 
 ### 1. 将字符串转化为整数
 
-- [offer 67](<https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e?tpId=13&tqId=11202&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>)
+- [offer 67](<https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e?tpId=13&tqId=11202&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>)  leetcode 8
 - 思路： 此题主要考察边界问题
+

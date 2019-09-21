@@ -17,12 +17,75 @@ Easy 级别
 - dp[0] = False, dp[1] = False, dp[2] = True
 - dp[i] = True 当 j =  1, ... i-1 中有一个满足 i % j == 0 and dp[i-j]==False时； 其余情况均为 False
 
-### 思路2：
+
+## 2. 爬楼梯
+
+- 来源： leetcode 70
+- 思路： 
+  - dp[i]：爬到第i个台阶有多少种方法
+  - dp[1] = 1, dp[2] = 2
+  - dp[i] = dp[i-1] + dp[i-2]
+
+## 3. 打家劫舍
+
+- 来源： leetcode 198
+- 思路：
+  - dp[i]: 前 i 个房屋所能获取的最多财宝数
+  - dp[i] = max(dp[i-1], dp[i-2] + nums[i])
+
+
+## 4. 最大子段和
+
+- 来源： leetcode 53
+- 思路：
+  - dp[i]: 以 nums[i] 为结尾的最大子段和
+  - dp[i] = max(dp[i-1] + nums[i], nums[i])
 
 
 
+---
+Medium
+
+## 1. 找零钱
+
+- 来源： leetcode 322
+- 思路：
+   - dp[i]：面值为 i 的钞票所需要的最少钞票数量
+   - dp[i] = min(dp[i-j] for j in nums) + 1
+   - 注意： 边界条件的处理
+
+## 2. 三角形最小路径和
+
+- 来源： leetcode 120
+- 思路：自底向上
+  - dp[i][j]: 到 第 i行 第 j 列所需的最小路径和
+  - dp[i][j] = triangle[i][j] + min(dp[i+1][j], dp[i+1][j+1])
+  - 返回 dp[0][0]
+
+## 3. 最长上升子序列
+
+- 来源： leetcode 300
+- 思路：
+  - dp[i] : 以 nums[i] 为结尾的最长上升子序列
+  - dp[i] = max(dp[i], dp[j] + 1 ) for j in 0..i-1 if nums[i] > nums[j]
+
+## 4. 最小路径和
+
+- 来源： leetcode 64
+- 思路：
+  - dp[i][j]: 达到 nums[i][j] 时的最少路径
+  - dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + nums[i][j] 
 
 
+---
+Hard
+
+## 1. 地下城游戏
+
+- 来源： leetcode 174
+- 思路：由底向上
+  - dp[i][j]: 到达 i,j 位置需要最少的血量
+  - dp[i][j] = max(1, dp[i+1][j], dp[i][j+1]) - dungeon[i][j]
 
 
 

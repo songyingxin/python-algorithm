@@ -63,3 +63,16 @@ https://blog.csdn.net/zxzxzx0119/article/details/81604489
 - min_sum_index[i] = i if min_sum[i+1]>0 else min_sum_index[i+1]
 
 
+## 7. 最长连续序列
+
+- 来源： leetcode 128
+- 思路：
+
+## 8. 每日温度
+
+- 来源： leetcode 739
+- 思路： 单调栈： 
+  - 入栈条件： 当前元素比栈顶元素小
+  - 出栈条件： 遇到比自己大的温度
+
+
