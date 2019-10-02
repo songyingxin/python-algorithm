@@ -243,34 +243,6 @@ f(n,m) = (f(n-1,m) + m) % n, if n > 1
 - 思路：从头到尾遍历数组， 在扫描到第i个数字时， 记住之前 i-1 个数字中的最小值，然后计算最大利润即可
 
 
-## 8. 求 1 + ... + n
-
-- 来源： [offer 64](<https://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1?tpId=13&tqId=11200&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>)
-- 思路： 递归来解
-
-## 9. 不用加减乘除做加法
-
-- 来源：[offer 65](<https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215?tpId=13&tqId=11201&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>)
-- 思路：采用位运算的思路
-
-## 10. 不使用新变量，交换两个变量的值
-
-- 基于加减法
-
-  ```
-  a = a + b
-  b = a - b
-  a = a - b
-  ```
-
-- 基于异或运算
-
-  ```
-  a = a ^ b
-  b = a ^ b
-  a = a ^ b
-  ```
-
 ## 6. 构建乘积数组
 
 - 来源： [offer 66](<https://www.nowcoder.com/practice/94a4d381a68b47b7a8bed86f2975db46?tpId=13&tqId=11204&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>)
@@ -279,3 +251,12 @@ f(n,m) = (f(n-1,m) + m) % n, if n > 1
 - 思路： 定义 C[i] = A[0] * ... * A[i-1], D[i] = A[i+1] * ... * A[n-1]， 那么则有： C[i] = C[i-1] * A[i-1]， D[i] = D[i+1] * A[i+1]， 最终的 B[i] = C[i] * D[i]
 
 
+## 1. 滑动窗口的最大值  --Re
+
+- [offer 59](<https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788?tpId=13&tqId=11217&tPage=4&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
+- 思路：采用一个队列S， 注意S中存放的是元素的下标。 遍历数组arr：
+  - if S 为空， 则插入i
+  - if arr[i] > arr[S.first], 则清空S， S.first = i
+  - if S.size() == 2, arr[i] <= arr[S.end]， 则丢弃 arr[i]
+  - if S.size() ==2, arr[i] > arr[S.end]， 则 S.end = arr[i]
+  - if i+1 - S.first == 3, 则S.first 出队列

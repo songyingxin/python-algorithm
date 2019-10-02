@@ -10,3 +10,9 @@
 
 - 来源：[offer  13](<https://www.nowcoder.com/practice/6e5207314b5241fb83f2329e89fdecc8?tpId=13&tqId=11219&tPage=4&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
  - 思路： 采用回溯法， 如果机器人能够进入坐标(i, j)的格子， 再判断它能否进入4个相邻的格子 (i, j-1), (i-1, j), (i, j+1), (i+1, j)
+
+
+## 3. 求 1 + ... + n
+
+- 来源： [offer 64](<https://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1?tpId=13&tqId=11200&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>)
+- 思路： 递归来解

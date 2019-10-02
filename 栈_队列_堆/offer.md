@@ -27,24 +27,4 @@
 - 来源： [offer 31](<https://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106?tpId=13&tqId=11174&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
 - 思路：用一个栈来模拟这个过程
 
-# 第六章
-
----
-
-## 1. 滑动窗口的最大值  --Re
-
-- [offer 59](<https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788?tpId=13&tqId=11217&tPage=4&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
-- 思路：采用一个队列S， 注意S中存放的是元素的下标。 遍历数组arr：
-  - if S 为空， 则插入i
-  - if arr[i] > arr[S.first], 则清空S， S.first = i
-  - if S.size() == 2, arr[i] <= arr[S.end]， 则丢弃 arr[i]
-  - if S.size() ==2, arr[i] > arr[S.end]， 则 S.end = arr[i]
-  - if i+1 - S.first == 3, 则S.first 出队列
-
-
-## 2. 队列的最大值 
-
-- offer 59  无 oj
-- 思路： 采用双队列的形式，一个队列存储数据，一个队列存储当前最大值。
-
 

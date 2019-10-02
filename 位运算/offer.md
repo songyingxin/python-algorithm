@@ -19,3 +19,8 @@
 **将一个整数减去1， 再和原整数做与运算，会将该整数最右边的1变成0， 该整数二进制有多少个1， 就可以进行多少次这样的操作**
 
 扩展很有意思，需要再看
+
+## 9. 不用加减乘除做加法
+
+- 来源：[offer 65](<https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215?tpId=13&tqId=11201&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>)
+- 思路：采用位运算的思路
