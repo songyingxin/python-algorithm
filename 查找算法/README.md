@@ -78,3 +78,9 @@
 ### 思路
 
 按照原数组逆置构建二叉查找树， 并记录每个节点中左子树的个数，然后将所有左子树的个数相加即可。
+
+
+
+## 1. 计算右侧小于当前元素的个数 -- right_small
+
+- **来源：[leetcode 315](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)**

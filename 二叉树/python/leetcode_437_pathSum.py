@@ -1,9 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
 
 class Solution:
@@ -11,22 +5,23 @@ class Solution:
         if not root:
             return 0
         
-        return self.path(root, sum) + self.pathSum(root.left, sum) + self.pathSum(root.right, sum)
-    
-    def path(self, root, sum):
-        if not root:
-            return 0
-        
-        sum -= root.val
+        def dfs(node, sum_val):
+            if not node:
+                return 0
+            
+            res = 1
+            sum_val += node.val
 
-        if sum == 0:
-            return 1 + self.path(root.left, sum) + self.path(root.right, sum)
-        else:
-            return 0 + self.path(root.left, sum) + self.path(root.right, sum)
+            res = 1 if sum_val == sum else 0
+            res += dfs(node.left, sum_val) + dfs(node.right, sum_val)
+            return res
+            
+        return dfs(root, 0) + self.pathSum(root.left, sum) + self.pathSum(root.right, sum)
 
 
 
-    
+
+
 
 
 

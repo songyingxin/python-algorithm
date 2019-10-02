@@ -10,10 +10,3 @@
 
 - 来源：[offer  13](<https://www.nowcoder.com/practice/6e5207314b5241fb83f2329e89fdecc8?tpId=13&tqId=11219&tPage=4&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
  - 思路： 采用回溯法， 如果机器人能够进入坐标(i, j)的格子， 再判断它能否进入4个相邻的格子 (i, j-1), (i-1, j), (i, j+1), (i+1, j)
-
-
-
-
-
-
-**回溯法依旧不熟**
