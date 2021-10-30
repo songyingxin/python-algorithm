@@ -4,7 +4,7 @@
 #         self.val = x
 #         self.next = None
 
-
+# 思路： 快慢指针。 快指针一次走两步，慢指针一次走一步，同时出发，在第一次相遇后，快指针回到起点，一次走一步，二者最终相遇的点就是环的入口节点。
 class Solution:
     def EntryNodeOfLoop(self, pHead):
         # write code here

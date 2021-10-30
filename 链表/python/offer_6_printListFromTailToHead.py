@@ -4,7 +4,7 @@
 #         self.val = x
 #         self.next = None
 
-# 思路1
+# 思路1: 空间复杂度O(n)，时间复杂度O(n) 采用一个列表保存链表所有节点，然后直接返回倒序数组。
 class Solution:
     # 返回从尾部到头部的列表值序列，例如[1,2,3]
 
@@ -18,7 +18,8 @@ class Solution:
         return arr[::-1]
 
 
-# 思路2： 递归
+# 思路2： 空间复杂度O(n)，时间复杂度O(n) 采用递归的思想来做。
+# # 此例子牛客现在无法通过，不清楚原因
 class Solution:
     # 返回从尾部到头部的列表值序列，例如[1,2,3]
     def printListFromTailToHead(self, listNode):

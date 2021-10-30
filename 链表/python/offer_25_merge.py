@@ -4,17 +4,12 @@
 #         self.val = x
 #         self.next = None
 
+# 新建一个头节点，哪个小取哪个， 最后把非空的接在新链表后面
 
 class Solution:
     # 返回合并后列表
     def Merge(self, pHead1, pHead2):
         # write code here
-
-        if not pHead1:
-            return pHead2
-        
-        if not pHead2:
-            return pHead1
 
         new_head = ListNode(0)
         node = new_head

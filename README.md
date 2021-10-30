@@ -2,7 +2,7 @@
 
 本仓库是我在准备 2020 届秋招时所刷过的题，刷题对于找工作的重要性不言而喻， 如果你现在还没有开始，我的建议是从明天开始，一天5道。 如果你按照我的这个仓库的目录进行刷题，刷个两三遍，对于每道题都能很快的产生思路， 那么毕业找工作的时候，BAT 面试时候的手撸算法这关，你是完全没有问题的。 
 
-该仓库大概包含 300+ 道编程题， 是由我个人筛选的， 基本所有的知识点都有涉及到，目前仓库还在更新中，预计12月底完成。
+该仓库大概包含 300+（203） 道编程题， 是由我个人筛选的， 基本所有的知识点都有涉及到，目前仓库还在更新中，预计12月底完成。
 
 - docs： 该文件夹下包含了诸多数据结构基础知识，如果对哪一方面不熟悉可以参考一下
 
@@ -14,9 +14,9 @@
 
 ### 1. 剑指 offer
 
-| [offer 6: 从头到尾打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=13&tqId=11156&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [offer 18 :删除链表中重复的节点](<https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef?tpId=13&tqId=11209&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>) | [offer 22: 链表中的倒数第 k 个节点](<https://www.nowcoder.com/practice/529d3ae5a407492994ad2a246518148a?tpId=13&tqId=11167&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>) |
+| [offer 6: 从头到尾打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=13&tqId=11156&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [offer 18 :删除链表中重复的节点](<https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef?tpId=13&tqId=11209&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>) -- 重点 | [offer 22: 链表中的倒数第 k 个节点](<https://www.nowcoder.com/practice/529d3ae5a407492994ad2a246518148a?tpId=13&tqId=11167&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [offer 23: 链表中环的入口节点](<https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4?tpId=13&tqId=11208&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>) | [offer 25: 反转链表](<https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca?tpId=13&tqId=11168&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>) | [offer 25: 合并两个排序的链表](<https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337?tpId=13&tqId=11169&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>) |
+| [offer 23: 链表中环的入口节点](<https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4?tpId=13&tqId=11208&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>) -- 重点 | [offer 25: 反转链表](<https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca?tpId=13&tqId=11168&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>) | [offer 25: 合并两个排序的链表](<https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337?tpId=13&tqId=11169&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>) |
 | [offer 35: 复杂链表的复制](<https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba?tpId=13&tqId=11178&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>) | [offer 52: 两个链表的第一个公共节点](<https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46?tpId=13&tqId=11189&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>) |                                                              |
 
 ### 2. Leetcode Easy
