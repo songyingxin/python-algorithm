@@ -1,37 +1,5 @@
 
-# 第二章
----
-## 1. 斐波那契数列
 
-- 来源： [offer 10](<https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>)， 此题本质上是动态规划的简化， 已经给出了状态转移方程，主要是看如何省略 dp 数组，仅维护两个变量来维持整个动态方程
-- 输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）
-
-$$
-f(n)= \begin{cases} 0 \qquad n=0 \\ 1  \qquad n=1 \\ f(n-1) + f(n-2) \qquad n>1 \end{cases}
-$$
-
-## 2. 青蛙跳台阶问题
-
-- 来源： [offer 10](<https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4?tpId=13&tqId=11161&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)， 本题考的是你有没有能力将问题转化为动态规划问题，并写出状态转移方程。
-- n=1 时， 1种跳法, 即 f(1) = 1
-- n=2 时， 2种跳法, 即 f(2) = 2
-- n>2 时， 第一次跳的时候有两种选择：
-> - 第一次只跳1级，则此时跳法数目 = 后面剩下n-1级的跳法数目 f(n-1)
-> - 第一次只跳2级，则此时跳法数目 = 后面剩下的 n-2 级台阶的跳法数目 f(n-2)
-> 因此有 f(n) = f(n-1) + f(n-2)
-
-### 3. 变态跳台阶
-
-- 来源： [offer 10](<https://www.nowcoder.com/practice/22243d016f6b47f2a6928b4313c85387?tpId=13&tqId=11162&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
-- 思路： 我们可以用归纳法推出： $f(n) = f(1) + ... + f(n-1) + 1 =  2^{n-1}$， 如果可能，推一遍更好。
-
-### 4. 矩形覆盖
-
-- 来源： [offer 10](<https://www.nowcoder.com/practice/72a5a919508a4251859fb2cfb987a0e6?tpId=13&tqId=11163&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
-- 动态规划，状态转移方程：
-> - n =1: f(n) = 1
-> - n =2: f(n) = 2
-> - n > 2: f(n) = f(n-1) + f(n-2)
 
 
 ## 5. 剪绳子

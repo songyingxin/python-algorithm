@@ -1,5 +1,12 @@
 
-# DFS
+
+# https://leetcode-cn.com/problems/number-of-islands/
+
+# DFS，深度优先遍历，将每一个扫描过的标记为0
+
+from re import A
+
+
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
 
@@ -31,7 +38,7 @@ class Solution:
         
         return result
 
-# BFS
+# BFS，广度优先遍历
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         if not grid:
@@ -72,4 +79,3 @@ class Solution:
 
 
         
-

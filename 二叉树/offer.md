@@ -1,21 +1,4 @@
 
-# 第二章
----
-
-## 1. 重建二叉树 -- Re
-
-- 来源： [offer 7](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tqId=11157&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-- 思路： 与画树的思路一致，以 pre[0] 为头节点，根据 tin 划分左，右子树范围，分别递归简历
-- 注意pre 与 vin的长度一致是一样的，重点就在于pre与vin的划分。
-
-## 2. 二叉树的下一个结点 -- Re
-
-- 来源： [offer 8](https://www.nowcoder.com/practice/9023a0c988684a53960365b889ceaf5e?tpId=13&tqId=11210&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
-
-- 思路： 
-  - 如果一个结点有**右子树**，则它的下一个结点就是**它的右子树中的最左子结点**； 
-  - 如果**没有右子树**，且其为其父节点的**左子结点**， 则它的下一个结点就是它的父结点
-  - 如果**没有右子树**， 且它为它父节点的**右子结点**， 则我们需要沿着指向父节点的指针一直向上遍历，直到找到一个它是该父节点的左子结点。此时，该父节点就是我们要找的下一个结点。
 
 
 ## 第三章
