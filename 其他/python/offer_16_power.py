@@ -4,7 +4,7 @@
 class Solution:
     def Power(self, base, exponent):
         # write code here
-        if base == 0 and exponent < 0:
+        if base == 0:
             return 0
         
         if exponent == 0:
