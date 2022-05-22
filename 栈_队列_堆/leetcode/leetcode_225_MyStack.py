@@ -1,3 +1,7 @@
+
+# push： 直接将元素存入data中
+# pop： 将data 中的元素依次 pop到help中，直至data中只剩下一个元素， 然后弹出该元素， data， help互换
+
 class MyStack:
 
     def __init__(self):

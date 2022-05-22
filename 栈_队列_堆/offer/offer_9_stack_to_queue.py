@@ -1,7 +1,9 @@
 # -*- coding:utf-8 -*-
 
 
-# 
+# 思想：   
+# push： 直接将元素直接存入 stack1 中
+# pop: 如果stack2为空，则将stack1 中元素压入到stack2中，再pop； 如果非空，则直接pop。
 class Solution:
     def __init__(self):
         self.stack1 = []

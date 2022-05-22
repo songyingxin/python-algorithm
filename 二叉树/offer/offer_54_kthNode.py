@@ -6,27 +6,25 @@
 #         self.right = None
 
 class Solution:
-    # 返回对应节点TreeNode
-    def KthNode(self, pRoot, k):
-        self.arr = []
-        if k == 0 or pRoot == None:
-            return None
-        self._inorder_traversal(pRoot)
+    def KthNode(self , proot: TreeNode, k: int) -> int:
+        # write code here
+        array = []
+        def inorder(proot):
+            if not proot:
+                return None
+            inorder(proot.left)
+            array.append(proot.val)
+            inorder(proot.right)
+            
+        if not proot or k == 0:
+            return -1
 
-        if  k > len(self.arr):
-            return None
-
-        return self.arr[k-1]
-
-    def _inorder_traversal(self, root):
-
-        if root.left:
-            self._inorder_traversal(root.left)
+        inorder(proot)
         
-        self.arr.append(root)
-
-        if root.right:
-            self._inorder_traversal(root.right)
+        if len(array) < k:
+            return -1
+        
+        return array[k-1]
 
 
 

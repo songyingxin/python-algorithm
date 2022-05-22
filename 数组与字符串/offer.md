@@ -48,21 +48,11 @@
 
   > -  如果大根堆，小根堆长度相等，则把数据与大根堆堆顶比较
 
-## 4. 连续子数组的最大和
-
-- 来源：[offer 42](<https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484?tpId=13&tqId=11183&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
-- 思路：动态规划
-  - dp[i] ： 表示以第i个数字结尾的子数组的最大和 
-  - dp[i] = arr[i] if dp[i-1] < 0 else dp[i-1] + arr[i]
 ## 5. 1-n 整数中1 出现的次数
 
 - 来源： offer 43  leetcode 233
 - 思路：
-  - 对于1， 11， 21，这部分数来看，每10个数，个位上的 `1` 就会出现一次， 同理，每100个数， 10位上的 `1` 就会出现一次。 
-  - 对于11， 12， 13这部分数来看，如果十位上的数是 `1` ，那么最后 `1` 的个数为 `x+1`， x 为个位的数值； 如果十位上的数大于 `1` ，那么最后 `1` 的数量加 10
-- 算法：将 i 从1 遍历到 n ，每次遍历 i 扩大 10倍：
-  - $\frac{n}{i * 10} * i$ 表示 `(i * 10)` 位上 `1` 的个数，注意，此处的分数为整除，因此不能直接约
-  - `min(max(n%(i*10)−i+1,0),i)` 表示需要额外数的 `(i * 10)` 位上 `1` 的个数
+
 
 ## 6.  数字序列中某一位数字
 - 来源： offer 44  [leetcode 400](<https://leetcode-cn.com/problems/nth-digit/>)
@@ -206,15 +196,4 @@ f(n,m) = (f(n-1,m) + m) % n, if n > 1
 - 来源： [offer 66](<https://www.nowcoder.com/practice/94a4d381a68b47b7a8bed86f2975db46?tpId=13&tqId=11204&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking>)
 
 
-- 思路： 定义 C[i] = A[0] * ... * A[i-1], D[i] = A[i+1] * ... * A[n-1]， 那么则有： C[i] = C[i-1] * A[i-1]， D[i] = D[i+1] * A[i+1]， 最终的 B[i] = C[i] * D[i]
-
-
-## 1. 滑动窗口的最大值  --Re
-
-- [offer 59](<https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788?tpId=13&tqId=11217&tPage=4&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking>)
-- 思路：采用一个队列S， 注意S中存放的是元素的下标。 遍历数组arr：
-  - if S 为空， 则插入i
-  - if arr[i] > arr[S.first], 则清空S， S.first = i
-  - if S.size() == 2, arr[i] <= arr[S.end]， 则丢弃 arr[i]
-  - if S.size() ==2, arr[i] > arr[S.end]， 则 S.end = arr[i]
-  - if i+1 - S.first == 3, 则S.first 出队列
+- 思路： 

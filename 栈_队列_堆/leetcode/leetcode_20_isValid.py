@@ -2,22 +2,22 @@ class Solution:
     def isValid(self, s: str) -> bool:
 
         stack = []
-        string = ['(', '[', '{']
+        left_char =  ['(', '[', '{']
         string_dict = {
-            '(': ')', 
-            '[': ']',
-            '{': '}'
+            ')': '(', 
+            ']': '[',
+            '}': '{'
         }
 
-        for val in s:
-            if val in string:
-                stack.append(val)
+        for _char in s:
+            if _char in left_char:
+                stack.append(_char)
             else:
-                if not stack or string_dict[stack[-1]]!= val:
+                if stack and string_dict[_char] == stack[-1]:
+                    stack.pop()
+                else:
                     return False
-                stack.pop()
-        
         if stack:
             return False
-        
-        return True
+        else:
+            return True

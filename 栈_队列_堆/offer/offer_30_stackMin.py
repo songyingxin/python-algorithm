@@ -1,4 +1,7 @@
 # -*- coding:utf-8 -*-
+
+
+# 思想：维护两个栈： min_stack, core_stack ，min_stack 维护最小元素
 class Solution:
 
     def __init__(self):

@@ -1,28 +1,118 @@
 # Leetcode
 
+## 0. 基础的 Leetcode 题
+
+| [leetcode 704: 二分查找](<https://leetcode-cn.com/problems/binary-search/>) |                                                              |                                                              |                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [leetcode 144: 二叉树前序遍历](<https://leetcode-cn.com/problems/binary-tree-preorder-traversal/>) | [leetcode 94: 二叉树的中序遍历](<https://leetcode-cn.com/problems/binary-tree-inorder-traversal/>) | [leetcode 102: 二叉树的层序遍历](<https://leetcode-cn.com/problems/binary-tree-level-order-traversal/>) | [leetcode 145: 二叉树的后序遍历](<https://leetcode-cn.com/problems/binary-tree-postorder-traversal/>) |
+| [leetcode 912: 排序数组](https://leetcode-cn.com/problems/sort-an-array/) |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                                                              |                                                              |
+
+
+
+
+
+## 栈-队列
+
+### 1. 基础算法
+
+| [leetcode 20:有效的括号](https://leetcode-cn.com/problems/valid-parentheses/) - easy | [leetcode 150: 逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/) - medium | [leetcode 155: 最小栈](https://leetcode-cn.com/problems/min-stack/submissions/) -- easy |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [leetcode 224: 基本计算器](https://leetcode-cn.com/problems/basic-calculator/) - hard | [leetcode 225: 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)  -- easy | [leetcode 232: 用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/) - easy |
+| [leectode 295: 数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/) - hard | [leetcode 394: 字符串解码](https://leetcode-cn.com/problems/decode-string/) - medium | [leetcode 1047: 删除字符串中的所有相邻重复项](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/) |
+| [leetcode 946: 验证栈序列](<https://leetcode-cn.com/problems/validate-stack-sequences/>) - medium |                                                              |                                                              |
+
+### 2. 单调栈
+
+### 3. 单调队列
+
+
+
+
+
+
+
+## 查找算法
+
+|      |      |      |
+| ---- | ---- | ---- |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+
+
+
+## 贪心算法
+
+|      |      |      |
+| ---- | ---- | ---- |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+
+
+
+## 动态规划
+
+### 0. 基本动态规划问题
+
+| [leetcode 62: 不同路径](https://leetcode-cn.com/problems/unique-paths/) - medium | [leetcode 63:不同路径2](https://leetcode-cn.com/problems/unique-paths-ii/) - medium | [leetcode 64:最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/) - medium |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [leetcode 96: 不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/) |                                                              |                                                              |
+|                                                              |                                                              |                                                              |
+|                                                              |                                                              |                                                              |
+
+
+
+### 1. 子序列问题
+
+| [leetcode 72: 编辑距离](https://leetcode-cn.com/problems/edit-distance/) - hard | [leetcode 115: 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/) - hard | [leetcode 300: 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/) - medium |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [leetcode 392: 判断子序列](https://leetcode-cn.com/problems/is-subsequence/) - easy | [leetcode 583: 两个字符的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings/) - medium | [leetcode 1035: 不想交的线](https://leetcode-cn.com/problems/uncrossed-lines/) - medium |
+| [leetcode 1143: 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/) - medium |                                                              |                                                              |
+|                                                              |                                                              |                                                              |
+
+### 2. 连续子序列问题
+
+| [leetcode 5: 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) - medium | [leetcode 53: 最大子数组和](https://leetcode-cn.com/problems/maximum-subarray/) -- easy | [leetcode 647: 回文子串](https://leetcode-cn.com/problems/palindromic-substrings/) - medium |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [leetcode 674: 最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/) -- easy | [leetcode 718: 最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/) -- medium | [leetcode 32: 最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/) |
+| [leetcode 32: 最长有效括号 ](https://leetcode-cn.com/problems/longest-valid-parentheses/)- hard |                                                              |                                                              |
+|                                                              |                                                              |                                                              |
+
+
+
+## DFS 与 BFS -- 重新来过
+
+| [leetcode 126: 单词接龙2](https://leetcode-cn.com/problems/word-ladder-ii/) -- hard | [leetcode 127:单词接龙](https://leetcode-cn.com/problems/word-ladder/) -- hard | [leetcode 200:岛屿数量](https://leetcode-cn.com/problems/number-of-islands/) -- medium |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [leetcode 407: 接雨水](https://leetcode-cn.com/problems/trapping-rain-water-ii/) - hard | [leetcode 473: 火柴拼正方形](https://leetcode-cn.com/problems/matchsticks-to-square/) -- medium |                                                              |
+|                                                              |                                                              |                                                              |
+|                                                              |                                                              |                                                              |
+
+
+
+
+
+
+
+## 1. 数组与字符串
+
+## 哈希表与集合
+
+
+
+
+
 
 
 
 
 ## 5. 栈-队列-堆
-
-### 2. Leetcode Easy
-
-| [leetcode 225: 用队列实现栈](<https://leetcode-cn.com/problems/implement-stack-using-queues/>) | [leetcode 232: 用栈实现队列](<https://leetcode-cn.com/problems/implement-queue-using-stacks/>) | [leetcode 155: 最小栈](<https://leetcode-cn.com/problems/min-stack/>) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [leetcode 20: 有效的括号](<https://leetcode-cn.com/problems/valid-parentheses/>) |                                                              |                                                              |
-
-### 3. Leetcode Medium
-
-| [leetcode 215: 数组中的第 k 个最大元素](<https://leetcode-cn.com/problems/kth-largest-element-in-an-array/>) | [leetcode 946: 验证栈序列](<https://leetcode-cn.com/problems/validate-stack-sequences/>) |      |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-|                                                              |                                                              |      |
-
-### 4. Leetcode Hard
-
-| [leetcode 224: 基本计算器](<https://leetcode-cn.com/problems/basic-calculator/>) | [leetcode 295: 数据流的中位数](<https://leetcode-cn.com/problems/find-median-from-data-stream/>) |      |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-|                                                              |                                                              |      |
 
 
 
@@ -101,10 +191,6 @@
 | ------------------------------------------------------------ | ---- | ---- |
 |                                                              |      |      |
 
-## 3. 二分查找
-
-
-
 
 
 ## 4. 字符串
@@ -132,21 +218,9 @@
 
 
 
-## 4. 回文串
-
-### 1. Leetcode Easy
-
-| [leetcode 125: 验证回文串](<https://leetcode-cn.com/problems/valid-palindrome/>) |      |      |
-| ------------------------------------------------------------ | ---- | ---- |
-|                                                              |      |      |
+### 
 
 
-
-## 
-
-|      |      |      |
-| ---- | ---- | ---- |
-|      |      |      |
 
 ## 6. 二叉树
 

@@ -7,27 +7,22 @@
 
 
 class Solution:
-    # 返回二维列表[[1,2],[4,5]]
-    def Print(self, pRoot):
+    def Print(self , pRoot: TreeNode) -> List[List[int]]:
         # write code here
-        res = []
         if not pRoot:
-            return res
-
+            return []
+        
+        res = []
         queue = [pRoot]
         while queue:
-            vals = []
-            for i in queue:
-                vals.append(i.val)
-            res.append(vals)
-            tmp = []
-            for i in range(len(queue)):
-                node = queue.pop(0)
+            tmp_queue = []
+            tmp_res = []
+            for node in queue:
+                tmp_res.append(node.val)
                 if node.left:
-                    tmp.append(node.left)
+                    tmp_queue.append(node.left)
                 if node.right:
-                    tmp.append(node.right)
-
-            queue = tmp
-
+                    tmp_queue.append(node.right)
+            res.append(tmp_res)
+            queue = tmp_queue
         return res

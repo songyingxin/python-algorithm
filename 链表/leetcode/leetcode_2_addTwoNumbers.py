@@ -7,44 +7,39 @@
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-
-        new_head = ListNode(0)
-        p_node = new_head
         is_up = 0
+        new_head = ListNode(0)
+        node = new_head
 
         while l1 and l2:
+            now_val = l1.val + l2.val + is_up
+            is_up = now_val // 10
+            now_node = ListNode(now_val % 10)
 
-            new_val = l1.val + l2.val + is_up
-            node = ListNode(new_val%10)
-            is_up = new_val // 10
-
-            node.next = p_node.next
-            p_node.next = node
-            
-            p_node = p_node.next
+            now_node.next = node.next
+            node.next = now_node
+            node = now_node
 
             l1 = l1.next
             l2 = l2.next
         
-        other = l1 if l1 else l2
+        list_node = l1 if l1 else l2
+        while list_node:
+            now_val = list_node.val + is_up
+            is_up = now_val // 10
+            now_node = ListNode(now_val % 10)
 
-        while other:
-            new_val = other.val + is_up
-            node = ListNode(new_val % 10)
-            is_up = new_val // 10
+            now_node.next = node.next
+            node.next = now_node
+            node = now_node
 
-            node.next = p_node.next
-            p_node.next = node
-
-            p_node = p_node.next
-            
-            other = other.next
+            list_node = list_node.next
         
         if is_up != 0:
-            node = ListNode(is_up)
-            node.next = p_node.next
-            p_node.next = node
-
+            now_node = ListNode(is_up)
+            now_node.next = node.next
+            node.next = now_node
+        
         return new_head.next
 
 

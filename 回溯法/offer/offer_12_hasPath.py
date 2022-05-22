@@ -19,8 +19,6 @@ class Solution:
 
         directions = [(0, -1), (-1, 0), (0, 1), (1, 0)]
         rows = len(board)
-        if rows == 0:
-            return False
 
         cols = len(board[0])
 

@@ -7,25 +7,19 @@
 
 
 class Solution:
-    # 返回从上到下每个节点值列表，例：[1,2,3]
-    def PrintFromTopToBottom(self, root):
+    def PrintFromTopToBottom(self , root: TreeNode) -> List[int]:
         # write code here
-        res = []
         if not root:
-            return res
-
+            return []
         queue = [root]
-
+        res = []
         while queue:
-            now_node = queue.pop(0)
-            res.append(now_node.val)
-
-            if now_node.left:
-                queue.append(now_node.left)
-            
-            if now_node.right:
-                queue.append(now_node.right)
-            
+            node = queue.pop(0)
+            res.append(node.val)
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
         return res
         
 

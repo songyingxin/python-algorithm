@@ -5,18 +5,17 @@
 #         self.left = None
 #         self.right = None
 
-
 class Solution:
-    # 返回镜像树的根节点
-    def Mirror(self, root):
+    def Mirror(self , pRoot: TreeNode) -> TreeNode:
         # write code here
-
-        if not root:
+        if not pRoot:
             return 
-        root.left, root.right = root.right, root.left
-
-        self.Mirror(root.left)
-        self.Mirror(root.right)
+        
+        pRoot.left, pRoot.right = pRoot.right, pRoot.left
+        self.Mirror(pRoot.left)
+        self.Mirror(pRoot.right)
+        
+        return pRoot
 
 
 

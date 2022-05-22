@@ -1,8 +1,11 @@
 # -*- coding:utf-8 -*-
+
+
+# 思想： 用一个栈来模拟这个过程
 class Solution:
     def IsPopOrder(self, pushV, popV):
         # write code here
-        if not pushV or len(pushV) != len(popV):
+        if len(pushV) != len(popV):
             return False
         
         stack = []

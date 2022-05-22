@@ -7,25 +7,18 @@
 
 
 class Solution:
-    # 返回二维列表，内部每个列表表示找到的路径
-    def FindPath(self, root, expectNumber):
+    def FindPath(self , root: TreeNode, target: int) -> List[List[int]]:
         # write code here
-
-        if not root:
-            return []
-        
         res = []
-        self.dfs(root, expectNumber, res, [])
+        def find_path(root, target, path):
+            if not root:
+                return None
+            if not root.left and not root.right:
+                if target == root.val:
+                    res.append(path)
+            path.append(root.val)
+            find_path(root.left, target-root.val, path[:])
+            find_path(root.right, target-root.val, path[:])
+        find_path(root, target, [])
+        
         return res
-
-    def dfs(self, root, expectNumber, res, path):
-        path.append(root.val)
-
-        if root.val == expectNumber and not root.left and not root.right:
-            res.append(path)
-        
-        if root.left:
-            self.dfs(root.left, expectNumber - root.val, res, path[:] )
-        
-        if root.right:
-            self.dfs(root.right, expectNumber - root.val, res, path[:])

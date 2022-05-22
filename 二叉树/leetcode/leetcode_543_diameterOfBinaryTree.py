@@ -8,19 +8,17 @@
 
 class Solution:
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
+        self.max_distance = 1
 
-        def helper(node):
+        def depth(node):
             if not node:
-                return 0, 0
+                return 0
             
-            left_distance, left_depth = helper(node.left)
-            right_distance, right_depth = helper(node.right)
-
-            distance = max(left_distance, right_distance, left_depth + right_depth + 1)
-            depth = max(left_depth, right_depth) + 1
-
-            return distance, depth
+            left_depth = depth(node.left)
+            right_depth = depth(node.right)
+            self.max_distance = max(self.max_distance, left_depth + right_depth + 1)
+    
+            return max(left_depth, right_depth) + 1
         
-        distancce, _ = helper(root)
-
-        return distancce
+        depth(root)
+        return self.max_distance - 1

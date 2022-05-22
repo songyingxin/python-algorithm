@@ -1,4 +1,11 @@
 # -*- coding:utf-8 -*-
+
+# 思路： 定义 
+# C[i] = A[0] * ... * A[i-1], 
+# D[i] = A[i+1] * ... * A[n-1]， 那么则有： 
+# C[i] = C[i-1] * A[i-1]， D[i] = D[i+1] * A[i+1]， 
+# 最终的 B[i] = C[i] * D[i]
+
 class Solution:
     def multiply(self, A):
         # write code here

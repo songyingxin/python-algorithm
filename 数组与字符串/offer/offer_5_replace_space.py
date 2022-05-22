@@ -3,7 +3,6 @@ class Solution:
     # s 源字符串
     def replaceSpace(self, s):
         # write code here
-        s = s.split(' ')
-        return "%20".join(s)
+        return s.replace(' ', '%20')
 
 

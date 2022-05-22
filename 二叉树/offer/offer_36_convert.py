@@ -5,6 +5,8 @@
 #         self.left = None
 #         self.right = None
 
+# 思路1： 用中序遍历得到有序数组，然后将数组转化为双向链表
+
 
 class Solution:
     def Convert(self, pRootOfTree):
