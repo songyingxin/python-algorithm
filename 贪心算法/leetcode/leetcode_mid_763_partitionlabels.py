@@ -1,24 +1,22 @@
 class Solution:
-    def partitionLabels(self, S):
-        str2end = {}
-        result = []
-        S_len = len(S)
-        for i in range(len(S)):
-                str2end[S[i]] = i
-        start = 0
-        while( start < S_len):
-            end = str2end[S[start]]
-            i = start
-            while  i <= end:
-                if str2end[S[i]] > end:
-                    end = str2end[S[i]]
-                i += 1
-            result.append(end - start + 1)
-            start = end + 1
-        return result
+    def partitionLabels(self, s: str) -> List[int]:
 
-if __name__ == "__main__":
-    
-        # S = "ababcbacadefegdehijhklij"
-        S = "qiejxqfnqceocmy"
-        print(Solution().partitionLabels(S))
+        end_dict = {}
+        for index,val in enumerate(s):
+            end_dict[val] = index
+        
+        res = []
+        start = 0
+        while start < len(s):
+            end = end_dict[s[start]]
+            i = start 
+            while i <= end:
+                if end_dict[s[i]] > end:
+                    end = end_dict[s[i]]
+                
+                i += 1
+            
+            res.append(end-start+1)
+            start = end + 1
+        
+        return res

@@ -1,15 +1,14 @@
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
 
-        if not wordDict:
-            return not s
-        
-        dp = [False] * (len(s) + 1)
+        n = len(s) + 1
+        dp = [False] * n
         dp[0] = True
 
-        for i in range(1, len(s)+1):
+        word_dict = set(wordDict)
+        for i in range(1, n):
             for j in range(i)[::-1]:
-                if dp[j] and s[j:i] in wordDict:
+                if dp[j] and s[j:i] in word_dict:
                     dp[i] = True
                     break
         
