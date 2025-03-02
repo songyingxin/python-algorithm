@@ -1,13 +1,16 @@
-
-
 class Solution:
     def isUgly(self, n: int) -> bool:
+
         if n <= 0:
             return False
-
-        factors = [2, 3, 5]
-        for factor in factors:
-            while n % factor == 0:
-                n //= factor
+            
+        while n % 5 == 0:
+            n = n // 5
+        
+        while n % 2 == 0:
+            n = n // 2
+        
+        while n % 3 == 0:
+            n = n // 3
         
         return n == 1

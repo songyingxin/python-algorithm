@@ -22,3 +22,22 @@ class Solution:
 
         return res
         
+class Solution:
+    def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
+        res = []
+        def binary(root, item):
+            if not root:
+                return 
+
+            item.append(str(root.val))
+          
+            if not root.left and not root.right:
+                res.append('->'.join(item))
+                return
+        
+            binary(root.left, item[:])
+            binary(root.right, item[:])
+            
+        binary(root, [])
+        return res
+        
