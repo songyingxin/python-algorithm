@@ -4,9 +4,9 @@
 # 思路：哈希表
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        haxi = {}
-        for index, num in enumerate(nums):
-            if target - num in haxi:
-                return [haxi[target-num], index]
-            else:
-                haxi[num] = index
+        already = {}
+        for i, num in enumerate(nums):
+            sub_val = target - num 
+            if sub_val in already:
+                return [already[sub_val], i]
+            already[num] = i
