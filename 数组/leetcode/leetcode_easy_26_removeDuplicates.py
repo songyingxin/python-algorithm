@@ -1,9 +1,15 @@
 class Solution:
-    def removeDuplicates(self, nums):
-        left = 1
-        for i in range(1, len(nums)):
-            if nums[i] != nums[i-1]:
-                nums[left] = nums[i]
+    def removeDuplicates(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
+
+        left = 0
+        for num in nums[1:]:
+            if num == nums[left]:
+                continue
+            else:
                 left += 1
-        return left
+                nums[left] = num
+        
+        return left + 1
 

@@ -12,12 +12,20 @@ class Solution:
         res = []
         def dfs(node):
             if not node:
+<<<<<<< HEAD:二叉树/leetcode/leetcode_easy_145_postorderTraversal.py
                 return
 
             dfs(node.left)
             dfs(node.right)
             res.append(node.val)
 
+=======
+                return 
+            dfs(node.left)
+            dfs(node.right)
+            res.append(node.val)
+        
+>>>>>>> aee39073896dc72ae9473a4ac3cfc60c2efb46c8:二叉树/leetcode/树的遍历/leetcode_easy_145_postorderTraversal.py
         dfs(root)
         return res
 
