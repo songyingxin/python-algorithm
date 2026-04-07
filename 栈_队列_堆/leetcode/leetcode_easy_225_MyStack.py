@@ -8,50 +8,40 @@ class MyStack:
         """
         Initialize your data structure here.
         """
-        self.data = []
-        self.help = []
+        self.queue = []
+        self.help_queue = []
 
     def push(self, x):
         """
         Push element x onto stack.
         """
-        self.data.append(x)
+        self.queue.append(x)
 
     def pop(self):
         """
         Removes the element on top of the stack and returns that element.
         """
-        while len(self.data) > 1:
-            self.help.append(self.data.pop(0))
+        while len(self.queue) > 1:
+            self.help_queue.append(self.queue.pop(0))
 
-        result = self.data.pop(0)
-        self.help, self.data = self.data, self.help
+        result = self.queue.pop(0)
+        self.queue = self.help_queue
+        self.help_queue = []
         return result
 
     def top(self):
         """
         Get the top element.
         """
-        while len(self.data) > 1:
-            self.help.append(self.data.pop(0))
-        result = self.data[0]
-        self.help.append(self.data.pop(0))
-        self.help, self.data = self.data, self.help
-        return result
+        if not self.queue:
+            return 
+        return self.queue[-1]
 
     def empty(self):
         """
         Returns whether the stack is empty.
         """
-        if not self.data:
+        if not self.queue:
             return True
 
         return False
-
-
-# Your MyStack object will be instantiated and called as such:
-# obj = MyStack()
-# obj.push(x)
-# param_2 = obj.pop()
-# param_3 = obj.top()
-# param_4 = obj.empty()

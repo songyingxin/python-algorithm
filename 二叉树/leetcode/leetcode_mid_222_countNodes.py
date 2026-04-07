@@ -4,19 +4,18 @@ class Solution:
         if not root:
             return 0
         
-        left_height = 0
-        left_node = root
-
-        right_height = 0
-        right_node = root
-
         # 求左子树高度
-        while left_node:
-            left_node = left_node.left 
+        left_height = 0
+        node = root
+        while node:
+            node = node.left 
             left_height += 1
-        
-        while right_node:
-            right_node = right_node.right
+
+        # 求右子树高度
+        right_height = 0
+        node = root
+        while node:
+            node = node.right
             right_height += 1
         
         if left_height == right_height:

@@ -7,17 +7,17 @@
 
 
 class Solution:
-    def __init__(self):
-        self.sum = 0
+    def bstToGst(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
 
-    def bstToGst(self, root: TreeNode) -> TreeNode:
-
-        if not root:
-            return
-
-        self.bstToGst(root.right)
-        self.sum += root.val
-        root.val = self.sum
-        self.bstToGst(root.left)
-
+        self.res = 0
+        def dfs(node):
+            if not node:
+                return 
+            dfs(node.right)
+            node.val += self.res
+            self.res = node.val
+            dfs(node.left)
+            
+        
+        dfs(root)
         return root

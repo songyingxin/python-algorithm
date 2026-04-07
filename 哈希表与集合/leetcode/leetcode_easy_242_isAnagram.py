@@ -1,18 +1,18 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
 
-        nums = [0] * 26
-
+        s_dict = [0] * 26
+        a_start = ord('a')
         for val in s:
-            nums[ord(val) - ord('a')] += 1
+            s_dict[ord(val)-a_start] += 1
         
         for val in t:
-            nums[ord(val) - ord('a')] -= 1
+            s_dict[ord(val)-a_start] -= 1
         
-        for val in nums:
+        for val in s_dict:
             if val != 0:
                 return False
-        
+            
         return True
 
 class Solution:

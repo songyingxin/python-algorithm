@@ -9,18 +9,19 @@
 
 
 class Solution:
-    def __init__(self):
-        self.res = []
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        res = []
 
-    def inorderTraversal(self, root: TreeNode) -> List[int]:
-        if not root:
-            return 
+        def dfs(node):
+            if not node:
+                return
+            
+            dfs(node.left)
+            res.append(node.val)
+            dfs(node.right)
         
-        self.inorderTraversal(root.left)
-        self.res.append(root.val)
-        self.inorderTraversal(root.right)
-
-        return self.res
+        dfs(root)
+        return  res
 
 # 迭代
 class Solution:
@@ -30,7 +31,7 @@ class Solution:
         res = []
         p = root
 
-        while p or stack:
+        while p and stack:
 
             # 先把左子树压入栈中
             while p:

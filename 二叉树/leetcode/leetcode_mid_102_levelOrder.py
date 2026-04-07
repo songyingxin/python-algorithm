@@ -15,9 +15,9 @@ class Solution:
 
         while queue:
             tmp_queue = []
-            tmp_res = []
+            tmp = []
             for node in queue:
-                tmp_res.append(node.val)
+                tmp.append(node.val)
                 if node.left:
                     tmp_queue.append(node.left)
                 
@@ -25,7 +25,7 @@ class Solution:
                     tmp_queue.append(node.right)
 
             queue = tmp_queue
-            res.append(tmp_res)
+            res.append(tmp)
         
         return res
 

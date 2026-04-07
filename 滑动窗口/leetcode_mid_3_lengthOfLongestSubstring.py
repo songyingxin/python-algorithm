@@ -1,16 +1,16 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        used = {}  # 已经访问过的字符最近的index
-        max_length = 0
-        start = 0
+        max_length = 0 
+        pre_dict = {} # 已经访问过的字符最新的index
 
-        for i, c in enumerate(s):
-            if c in used and start <= used[c]:
-                start = used[c] + 1
-            else:
-                max_length = max(max_length, i - start + 1)
+        start = 0  # 记录当前字符串的开始位置
+
+        for i, v in enumerate(s):
+            if v in pre_dict and start <=pre_dict[v]:
+                start = pre_dict[v] + 1
             
-            used[c] = i
-        
+            max_length = max(max_length, i-start+1)
+            pre_dict[v] = i
         return max_length
+
 

@@ -3,30 +3,29 @@
 # 思路：s(digits[0...n-1]) = letter(digits[0]) + s(digits[1...n-1]) = letter(digits[0]) + letter(digits[1]) + s(digits[2...n-1])
 
 class Solution:
-
     def letterCombinations(self, digits: str) -> List[str]:
 
-        self.phone = {
-            '2': 'abc',
-            '3': 'def',
-            '4': 'ghi',
-            '5': 'jkl',
-            '6': 'mno',
-            '7': 'pqrs',
-            '8': 'tuv',
-            '9': 'wxyz'
+        res = []
+        help_dict = {
+            "2": "abc",
+            "3": "def",
+            "4": "ghi",
+            "5": "jkl",
+            "6": "mno",
+            "7": "pqrs",
+            "8": "tuv",
+            "9": "wxyz"
         }
 
-        def backtracking(digits, item):
-            if len(digits) == 0:
-                result.append(item)
-                return 
+        def dfs(now_digits, item):
+            if not now_digits:
+                res.append(item)
+                return
+            
+            now_str = help_dict[now_digits[0]]
+            for val in now_str:
+                tmp_item = item + val
+                dfs(now_digits[1:], tmp_item)
         
-            for word in self.phone[digits[0]]:
-                backtracking(digits[1:], item + word)
-
-        result = []
-        if digits:
-            backtracking(digits, '')
-        
-        return result
+        dfs(digits, "")
+        return res
