@@ -1,13 +1,18 @@
-import collections
-
 class Solution:
-    def longestPalindrome(self, s):
+    def longestPalindrome(self, s: str) -> int:
 
-        has_odd = 0
-        result = 0
-        for _,val in collections.Counter(s).items():
-            result += val //2 * 2
-            if val % 2!= 0:
-                has_odd = 1
+        help_dict = {}
+        for val in s:
+            if val in help_dict:
+                help_dict[val] += 1
+            else:
+                help_dict[val] = 1
         
-        return result + has_odd
+        res = 0
+        for key,val in help_dict.items():
+            res += val//2 * 2
+
+        if res == len(s):
+            return res
+        else:
+            return res + 1

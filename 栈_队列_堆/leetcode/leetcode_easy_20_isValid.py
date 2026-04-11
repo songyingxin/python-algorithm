@@ -1,21 +1,23 @@
 class Solution:
     def isValid(self, s: str) -> bool:
 
-        help_dict = {
-            '(': ')',
-            '[': ']',
-            '{': '}'
-        }
         stack = []
+        help_dict = {
+            "(": ")",
+            "{": "}",
+            "[": "]"
+        }
 
         for val in s:
             if val in help_dict:
                 stack.append(val)
             else:
-                if stack and help_dict[stack[-1]] == val:
-                    stack.pop()
-                else:
+                if not stack:
+                    return False
+                tmp = stack.pop()
+                if help_dict[tmp] != val:
                     return False
         if stack:
             return False
         return True
+        
