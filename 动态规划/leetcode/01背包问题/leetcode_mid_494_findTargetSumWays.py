@@ -1,17 +1,25 @@
 class Solution:
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
 
-        sum_val = sum(nums)
-        diff = sum_val - target
-        if  diff < 0 or diff % 2  != 0:
+        total = sum(nums)
+        if total < target:
             return 0
         
-        neg = diff//2
-        dp = [0] * (neg+1)
+        diff = total - target
+        if  diff % 2  != 0:
+            return 0
+        
+        n = diff//2
+
+        # dp[i] 装满容量为i的背包的话，有多少种方法
+        dp = [0] * (n+1)
         dp[0] = 1
 
         for num in nums:
-            for j in range(num, neg+1)[::-1]:
+            for j in range(n, num-1,-1):
                 dp[j] += dp[j-num]
         
-        return dp[neg]
+        return dp[n]
+
+
+

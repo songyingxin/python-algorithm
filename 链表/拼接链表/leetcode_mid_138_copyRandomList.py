@@ -15,8 +15,9 @@ class Solution:
             return
         
         node = head
-        map_node = {}
 
+        # key:原节点， value：复制出来的新节点
+        map_node = {}
         while node:
             clone = Node(node.val, None, None)
             map_node[node] = clone
@@ -24,15 +25,13 @@ class Solution:
         
         node = head
         while node:
+            # 克隆 next 指针
             if node.next:
                 map_node[node].next = map_node[node.next]
-            else:
-                map_node[node].next = None
             
+            # 克隆 random 指针
             if node.random:
                 map_node[node].random = map_node[node.random]
-            else:
-                map_node[node].random = None
 
             node = node.next
         

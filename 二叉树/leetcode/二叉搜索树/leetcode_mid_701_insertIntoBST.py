@@ -1,19 +1,20 @@
-
-
-# 递归法
 class Solution:
     def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
 
-        if not root:
-            return TreeNode(val)
+        self.val = val
+
+        def dfs(node):
+            if not node:
+                return TreeNode(self.val)
+            
+            if node.val < self.val:
+                node.right = dfs(node.right)
+            else:
+                node.left = dfs(node.left)
+            
+            return node
         
-        if val < root.val:
-            root.left = self.insertIntoBST(root.left, val)
-        
-        if val > root.val:
-            root.right = self.insertIntoBST(root.right, val)
-        
-        return root
+        return dfs(root)
 
 
 # 迭代法

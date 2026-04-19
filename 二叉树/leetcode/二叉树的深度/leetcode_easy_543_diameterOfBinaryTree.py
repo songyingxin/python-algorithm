@@ -14,4 +14,4 @@ class Solution:
             return max(left_depth, right_depth) + 1
         
         dfs(root)
-        return self.res - 1
+        return self.res - 1  # 路径 = 经过的节点-1

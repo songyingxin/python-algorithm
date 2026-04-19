@@ -20,7 +20,7 @@ class Solution:
                 return root.left
             # 左子树，右子树均不为空
             else:
-                # 找只比key大一点的节点
+                # 找只比key大一点的节点，然后将该节点设置为当前的根节点
                 node = root.right
                 while node.left:
                     node = node.left

@@ -11,10 +11,9 @@ class Solution:
             node.val = self.pre_val + node.val
             self.pre_val = node.val
             dfs(node.left)
+            return node
             
-        
-        dfs(root)
-        return root
+        return dfs(root)
 
 
 class Solution:

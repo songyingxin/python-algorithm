@@ -1,9 +1,13 @@
 class Solution(object):
     def groupAnagrams(self, strs):
-        ans = collections.defaultdict(list)
+        res = {}
         for s in strs:
-            ans[tuple(sorted(s))].append(s)
-        return ans.values()
+            s_sort = tuple(sorted(s))
+            if s_sort in res:
+                res[s_sort].append(s)
+            else:
+                res[s_sort] = [s]
+        return res.values()
 
         
 # 思路2

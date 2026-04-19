@@ -12,11 +12,10 @@ class Solution:
             if val not in help_dict:
                 return False
             
-            if help_dict[val] <= 0:
-                return False
-            
             help_dict[val] -= 1
-        
+
+            if help_dict[val] < 0:
+                return False
         return  True
 
 class Solution:

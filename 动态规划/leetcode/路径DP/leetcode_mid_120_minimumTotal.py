@@ -1,10 +1,14 @@
 # 二维空间
 class Solution:
     def minimumTotal(self, triangle: List[List[int]]) -> int:
-
-        dp = [row.copy() for row in triangle]
-
         m = len(triangle)
+
+        dp = []
+        for i in range(m):
+            n = len(triangle[i])
+            dp.append([0] * n)
+        
+        dp[0][0] = triangle[0][0]
 
         for i in range(1,m):
             dp[i][0] = dp[i-1][0] + triangle[i][0]
@@ -18,9 +22,6 @@ class Solution:
                     dp[i][j] = min(dp[i-1][j], dp[i-1][j-1]) + triangle[i][j]
         
         return min(dp[-1]) 
-
-
-
 
 
 # 一维空间优化，自底向上

@@ -10,6 +10,7 @@ class Solution:
         if not head or not head.next:
             return head
         
+        # 找到链表的中间节点
         slow, fast = head, head.next
 
         while fast and fast.next:
@@ -17,8 +18,10 @@ class Solution:
         
         mid, slow.next = slow.next, None
 
+        # 分别递归进行排序
         left, right = self.sortList(head), self.sortList(mid)
 
+        # 开始归并
         h = res = ListNode(0)
 
         while left and right:

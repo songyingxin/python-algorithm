@@ -1,19 +1,27 @@
+
 class Solution:
     def canPartition(self, nums: List[int]) -> bool:
 
-        n = len(nums)
-        if n < 2:
+        if len(nums) < 2:
             return False
         
         total = sum(nums)
         if total % 2 != 0:
             return False
         
-        target = total // 2
-        dp = [False] * (target+1)
-        dp[0] = True
-        for index, num in enumerate(nums):
-            for j in range(num, target+1)[::-1]:
-                dp[j] |= dp[j-num]
+        n = total // 2 
+        dp = [0] * (n+1)
+
+        for num in nums:
+            for i in range(n, num-1, -1):
+                dp[i] = max(dp[i], dp[i-num] + num)
         
-        return dp[target]
+        return dp[-1] == n
+
+
+
+
+
+
+
+
