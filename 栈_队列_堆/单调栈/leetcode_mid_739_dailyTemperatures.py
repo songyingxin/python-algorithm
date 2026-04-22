@@ -1,7 +1,7 @@
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
 
-        stack = []  # 单调递增的栈
+        stack = []  # 单调递减的栈
         res = [0] * len(temperatures)
         for index, num in enumerate(temperatures):
 

@@ -8,7 +8,7 @@ class Solution:
             graph[y].append(x)
             degree[x] += 1
         
-        # 初始化入度为0的队列
+        # 初始化入度为0的队列，将没有依赖的课程入队列
         queue = [val for val in range(numCourses) if degree[val] == 0]
         cnt = 0
         while queue:

@@ -4,6 +4,7 @@ class Solution:
         res = 0
         for i in range(1, len(prices)):
             profit = prices[i] - prices[i-1]
-            res += max(0, profit)
+            if profit > 0:
+                res += profit
         
         return res

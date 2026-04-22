@@ -9,18 +9,22 @@
 # dp
 class Solution:
     def rob(self, root: TreeNode) -> int:
-        return max(self.dp(root))
+
+        def dfs(node):
+            """
+            返回值：
+                max_not_has_node: 不 rob 根节点值的最大值
+                max_has_node: rob 根节点的最大值
+            """
+            if not node:
+                return [0,0]
+            l = dfs(node.left)
+            r = dfs(node.right)
+
+            max_not_has_node = max(l) + max(r)
+            max_has_node = node.val + l[0] + r[0]
+            return [max_not_has_node, max_has_node]
+
+        root_max_val = dfs(root)
+        return max(root_max_val)
     
-
-    def dp(self, cur):
-        """
-        返回值：
-            dp[0]: 不 rob 根节点值的最大值
-            dp[1]: rob 根节点的最大值
-        """
-        if not cur:
-            return [0, 0]
-        l = self.dp(cur.left)
-        r = self.dp(cur.right)
-
-        return [max(l) + max(r), cur.val + l[0] + r[0]]

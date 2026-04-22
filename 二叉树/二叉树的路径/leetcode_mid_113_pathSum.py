@@ -11,7 +11,6 @@ class Solution:
             if not node.left and not node.right:
                 if target == 0:
                     res.append(item)
-
                 return
             
             dfs(node.left, target, item[:])

@@ -14,8 +14,8 @@ class Solution:
             for i in range(left, right+1):
                 res[top][i] = num   
                 num += 1
-            
             top += 1
+            
             for i in range(top,down+1):
                 res[i][right] = num
                 num += 1

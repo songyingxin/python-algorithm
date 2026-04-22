@@ -5,7 +5,7 @@ class Solution:
         total = sum(stones)
         n = total // 2
 
-        # 背包容量为下标i时的最大重量
+        # dp[i] 容量为i的背包，最多可以背多大重量
         dp = [0] * (n+1)
 
         for weight in stones:

@@ -10,13 +10,15 @@ class Solution:
 
             used = set()
             for i in range(start_index, n):
+                
+                # 用set去重
+                if nums[i] in used:
+                    continue
+                
                 # 不是递增直接跳过
                 if item and nums[i] < item[-1]:
                     continue
 
-                # 用set去重
-                if nums[i] in used:
-                    continue
                 used.add(nums[i])
                 
                 dfs(item+[nums[i]], i+1)

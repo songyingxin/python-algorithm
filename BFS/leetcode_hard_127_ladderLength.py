@@ -1,6 +1,4 @@
 
-# https://leetcode-cn.com/problems/word-ladder/
-
 class Solution(object):
     def ladderLength(self, beginWord, endWord, wordList):
 
@@ -9,12 +7,12 @@ class Solution(object):
         queue = [beginWord]
         next_word = []
 
-        depth = 1
+        res = 1
 
         while queue:
             for word in queue:
                 if word == endWord:
-                    return depth
+                    return res
                 
                 for index in range(len(word)):
                     for indice in "abcdefghijklmnopqrstuvwxyz":
@@ -23,7 +21,7 @@ class Solution(object):
                             word_set.remove(new_word)
                             next_word.append(new_word)
 
-            depth += 1
+            res += 1
             queue = next_word
             next_word = []
         return 0
