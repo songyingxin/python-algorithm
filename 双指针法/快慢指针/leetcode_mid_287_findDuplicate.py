@@ -1,22 +1,17 @@
-# 求和相减
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
-
-        tortoise = nums[0]
-        hare = nums[0]
-
+        
+        slow = 0
+        fast = 0
         while True:
-            tortoise = nums[tortoise]
-            hare = nums[nums[hare]]
-
-            if tortoise == hare:
+            slow = nums[slow]
+            fast = nums[nums[fast]]
+            if slow == fast:
                 break
         
-        ptr1 = nums[0]
-        ptr2 = tortoise
-        while ptr1 != ptr2:
-            ptr1 = nums[ptr1]
-            ptr2 = nums[ptr2]
+        slow = 0
+        while slow != fast:
+            slow = nums[slow]
+            fast = nums[fast]
         
-        return ptr1
-        
+        return slow

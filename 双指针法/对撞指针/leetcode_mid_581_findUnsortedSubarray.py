@@ -1,23 +1,27 @@
 class Solution:
     def findUnsortedSubarray(self, nums: List[int]) -> int:
-        n  = len(nums)
 
-        min_val = nums[n-1]
-        left = -1
-
-        max_val = nums[0]
-        right = -1
-
-        for i in range(n):
-            if nums[i] < max_val:
-                right = i 
-            else:
-                max_val = nums[i]
-            
-            if nums[n-i-1] > min_val:
-                left = n - i - 1
-            else:
-                min_val = nums[n-i-1]
-            
+        n = len(nums)
+        left, right = 0, n-1
         
-        return 0 if left == -1 else right - left + 1
+        # 找左边界：第一个逆序的位置
+        while left < n-1 and nums[left] <= nums[left+1]:
+            left += 1
+
+        # 说明有序，直接返回0
+        if left == n-1:
+            return 0
+        
+        # 找右边界：最后一个逆序的位置
+        while right > 0 and nums[right] >= nums[right-1]:
+            right -= 1
+        
+        # 针对中间的num，要重新确定左右边界
+        sub = nums[left:right+1]
+        while left > 0 and nums[left-1] > min(sub):
+            left -= 1
+        while right < n-1 and nums[right+1] < max(sub):
+            right += 1
+            
+        return right - left + 1
+        

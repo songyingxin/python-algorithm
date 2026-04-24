@@ -22,14 +22,17 @@ class Solution:
         return left
 
 
-# 牛逼解法
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        i = 0
-        for num in nums:
-            if i < 2 or num > nums[i-2]:
-                nums[i] = num
-                i += 1
 
-        return i
+        left = 0
+        
+        for i in range(len(nums)):
+            if left > 1 and nums[i] == nums[left-1] == nums[left-2]:
+                continue
+            
+            nums[left] = nums[i]
+            left += 1
+        
+        return left
 

@@ -4,6 +4,7 @@ class Solution:
         nums = sorted(nums)
         res = []
         for i in range(len(nums)):
+            # 去重
             if i > 0 and nums[i] == nums[i-1]:
                 continue
 
@@ -13,6 +14,7 @@ class Solution:
             target = 0-nums[i]
 
             while left < right:
+                # 去重
                 if left > i+1 and nums[left] == nums[left-1]:
                     left += 1
                     continue

@@ -4,15 +4,13 @@ class Solution:
         left = 0
         right = len(height) - 1
 
-        res = -1
-
+        max_area = 0
         while left < right:
-            now_val = (right-left) * min(height[left], height[right])
-            res = max(now_val, res)
-
-            if height[left] < height[right]:
+            area = (right-left) * min(height[right], height[left])
+            max_area = max(max_area, area)
+            if height[right] > height[left]:
                 left += 1
             else:
                 right -= 1
         
-        return res
+        return max_area
